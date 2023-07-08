@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    //PROBLEMA: Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    const num1 = parseFloat(prompt("Insira um 1° número ").trim().replace(",", "."))
+    const num2 = parseFloat(prompt("Insira um 2° número ").trim().replace(",", "."))
+    const operation = prompt("Me informe a operação que deseja realizar, insira /, *, +, ou -").trim()
+    let conta = 0
+
+    //PROCESSAMENTO
+    switch (operation) {
+        case "*":
+            conta += num1 * num2;
+            alert(`O resultado da Multiplicação dos números ${num1} e ${num2} é ${(conta).toFixed(2).replace(".", ",")}, que é ${resultado < 0 ? "Negativo" : "Positivo"}, ${(resultado % 2) == 0 ? "Par" : "Ímpar"} e ${Number.isInteger(resultado) ? "Inteiro." : "Decimal."}`)
+            break;
+
+        case "/":
+            conta += num1 / num2;
+            alert(`O resultado da Divisão dos números ${num1} e ${num2} é ${(conta).toFixed(2).replace(".", ",")}, que é ${resultado < 0 ? "Negativo" : "Positivo"}, ${(resultado % 2) == 0 ? "Par" : "Ímpar"} e ${Number.isInteger(resultado) ? "Inteiro." : "Decimal."}`)
+            break;
+
+        case "-":
+            conta += num1 - num2;
+            alert(`O resultado da Subtração dos números ${num1} e ${num2} é ${(conta).toFixed(2).replace(".", ",")}, que é ${resultado < 0 ? "Negativo" : "Positivo"}, ${(resultado % 2) == 0 ? "Par" : "Ímpar"} e ${Number.isInteger(resultado) ? "Inteiro." : "Decimal."}`)
+            break;
+
+        case "+":
+            conta += num1 + num2;
+            alert(`O resultado da Soma dos números ${num1} e ${num2} é ${(conta).toFixed(2).replace(".", ",")}, que é ${resultado < 0 ? "Negativo" : "Positivo"}, ${(resultado % 2) == 0 ? "Par" : "Ímpar"} e ${Number.isInteger(resultado) ? "Inteiro." : "Decimal."}`)
+            break;
+
+        default:
+            alert(`Resposta Invalida`)
+            break;
+    }
+    //SAÍDA
+</script>
